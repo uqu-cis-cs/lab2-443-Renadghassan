@@ -88,7 +88,6 @@ public class Garage{
         }
     }
 
-
     /************ Part 5 **************/
     /**
      * Define moveOut(String) that moves the car (by model) out of the garage; 
@@ -116,8 +115,6 @@ public class Garage{
       
     }
 
-
-
     /************ Part 6 **************/
     /**
      * Define moveOut(String) that moves the car (by model) into the garage; 
@@ -141,7 +138,6 @@ public class Garage{
             addCar(model);
         }
     } 
-
 
     /************ Part 7 **************/
     /**

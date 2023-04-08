@@ -40,7 +40,6 @@ public class Car{
     this.inOutGarage =false;
     }
 
-
     /************ Part 3 **************/
     /**
      * Define all getter methods below
@@ -56,7 +55,6 @@ public class Car{
     public boolean getinOutGarage() {
     return this.inOutGarage;
     }
-
 
     /************ Part 4 **************/
     /**
@@ -74,7 +72,6 @@ public class Car{
     this.inOutGarage = Garage;
     }
 
-
     /************ Part 5 **************/
     /**
      * Implement the following two methods
@@ -88,7 +85,4 @@ public class Car{
      public void moveCarIn() {
     this.inOutGarage =true;
     }
-
-
-
 }
