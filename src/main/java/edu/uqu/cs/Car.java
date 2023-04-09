@@ -23,7 +23,6 @@ public class Car{
      */
     private String model;
     private boolean inOutGarage;
-    private String name;
 
     /************ Part 2 **************/
     /**
