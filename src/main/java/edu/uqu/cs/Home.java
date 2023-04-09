@@ -14,39 +14,39 @@ public class Home{
 
 		// Create an object of type Garage 
                 //HERE
-                Garage TheGarage = new Garage();
+                Garage InGarage = new Garage();
 
 
 	        // Add "Toyota Corolla Cross" in the garage. Hint: use method addCar () of class Garage
                 //HERE
-                TheGarage.addCar("Toyota Corolla Cross");
+                InGarage.addCar("Toyota Corolla Cross");
 
                 //List all the cars in the garage. Hint: use method listCars () of class Garage
                 //HERE
                 System.out.println("All cars in the garage are:");
-                TheGarage.listCars();
+                InGarage.listCars();
         
                 // Place "Ford Fusion" in the garage. Hint: use method addCar () of class Garage
                 //HERE
-                TheGarage.addCar("Ford Fusion");
+                InGarage.addCar("Ford Fusion");
 
  	        // List all the cars in the garage once again. Hint: use method listCars () of class Garage
                 //HERE
                 System.out.println("");
                 System.out.println("All cars in the garage are:");
-                 TheGarage.listCars();
+                 InGarage.listCars();
      
 
                // Move out "Ford Fusion" from the garage. Hint: use method moveOut () of class Garage
                //HERE
-               TheGarage.moveOut("Ford Fusion");
+               InGarage.moveOut("Ford Fusion");
 
 
                // List all the cars in the garage. Hint: use method listCars () of class Garage
                //HERE
                System.out.println("");
                 System.out.println("All cars in the garage are:");
-                TheGarage.listCars();
+                InGarage.listCars();
         
         
         }
