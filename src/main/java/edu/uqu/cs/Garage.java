@@ -21,6 +21,7 @@ public class Garage{
      * private classType [] varName = new classType[size];
      *
      */
+    private Car[] cars= new Car[3];
 
     /************ Part 2 **************/
     /**
@@ -31,6 +32,7 @@ public class Garage{
      * public dataType varName= value;
      *
      */
+    public static int countCars =0;
 
     /************ Part 3 **************/
     /**
@@ -45,6 +47,11 @@ public class Garage{
      *     }
      *}
      */
+    public Garage() {
+    for (int i =0; i<cars.length; i++) {
+        cars[i]= new Car();
+        }
+    }
 
     /************ Part 4 **************/
     /**
@@ -59,7 +66,27 @@ public class Garage{
      * Syntax:
      * public void methodName(String m)
      */
-
+    public void addCar(String model) {
+        if (countCars == cars.length) {
+            System.out.println("Garage is full. Cannot add any more cars.");
+        }
+         else {
+            boolean carOut =false;
+            for (int i= 0; i<countCars; i++) {
+                if (cars[i].getModel().equals(model)) {
+             
+                    carOut =true;
+                    break;
+                }
+            }
+            if (!carOut) {
+                cars[countCars].setModel(model);
+                cars[countCars].moveCarIn();
+                countCars++;
+               
+            }
+        }
+    }
 
     /************ Part 5 **************/
     /**
@@ -71,8 +98,22 @@ public class Garage{
      * public void methodName(String m)
      *
      */
-
-
+    public void moveOut(String model) {
+        boolean carOut =false;
+        for (int i =0; i<countCars; i++) {
+            if (cars[i].getModel().equals(model)) {
+                cars[i].moveCarOut();
+               
+                carOut =true;
+                for (int x = i; x<countCars-1; x++) {
+                    cars[x] = cars[x+1];
+                }
+                countCars--;
+                break;
+            }
+        }
+      
+    }
 
     /************ Part 6 **************/
     /**
@@ -84,7 +125,19 @@ public class Garage{
      * public void methodName(String m)
      *
      */
-
+    public void moveIn(String model) {
+        boolean carOut =false;
+        for (int i =0; i<countCars; i++) {
+            if (cars[i].getModel().equals(model)) {
+               
+                carOut = true;
+                break;
+            }
+        }
+        if (carOut) {
+            addCar(model);
+        }
+    } 
 
     /************ Part 7 **************/
     /**
@@ -95,7 +148,9 @@ public class Garage{
      * public void methodName(String m)
      *
      */
-
-
-
+    public void listCars() {
+        for (int i =0; i<countCars; i++) {
+            System.out.println("Car " + (i+1) + ": " + cars[i].getModel());
+        }
+    }
 }
