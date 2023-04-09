@@ -150,7 +150,7 @@ public class Garage{
      */
     public void listCars() {
         for (int i =0; i<countCars; i++) {
-            System.out.println("Car " + (i+1) + ": " + cars[i].getModel());
+            System.out.print("Car " + (i+1) + ": " + cars[i].getModel());
         }
     }
 }

@@ -36,7 +36,7 @@ public class Car{
      * }
      */
     public Car() {
-    this.model ="";
+    this.model =" ";
     this.inOutGarage =false;
     }
 
